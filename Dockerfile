@@ -7,7 +7,7 @@ ARG TEST_ONLY_BUILD
 
 USER $NB_UID
 
-RUN conda install --quiet --yes \
+RUN pip3 install --quiet --yes \
     'openpyxl=2.1.4' \
     'pyautogui' \
     'PyPDF2' \
@@ -17,6 +17,5 @@ RUN conda install --quiet --yes \
     'imapclient' \
     'python3-xlib' \
     'twilio' && \
-    conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
