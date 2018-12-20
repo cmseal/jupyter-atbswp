@@ -8,7 +8,7 @@ ARG TEST_ONLY_BUILD
 USER $NB_UID
 
 RUN pip install --quiet \
-    'openpyxl=2.1.4' \
+    'openpyxl==2.1.4' \
     'pyautogui' \
     'PyPDF2' \
     'python-docx' \
