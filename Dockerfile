@@ -7,7 +7,7 @@ ARG TEST_ONLY_BUILD
 
 USER $NB_UID
 
-RUN pip3 install --quiet --yes \
+RUN pip install --quiet --yes \
     'openpyxl=2.1.4' \
     'pyautogui' \
     'PyPDF2' \
