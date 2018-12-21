@@ -17,5 +17,6 @@ RUN conda config --add channels conda-forge && \
     'python-docx' \
     'selenium' \
     'imapclient' && \
+    conda clean -tipsy && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
