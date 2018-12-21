@@ -9,15 +9,13 @@ USER $NB_UID
 
 RUN pip install -U pip
 
-RUN pip install --quiet \
-    'openpyxl==2.1.4' \
+RUN conda config --add channels conda-forge && \
+    conda install --quiet \
+    'openpyxl' \
     'pyautogui' \
     'PyPDF2' \
     'python-docx' \
-    'pyzmail' \
     'selenium' \
-    'imapclient' \
-    'python3-xlib' \
-    'twilio' && \
+    'imapclient' && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
