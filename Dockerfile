@@ -7,6 +7,8 @@ ARG TEST_ONLY_BUILD
 
 USER $NB_UID
 
+RUN pip install -U pip
+
 RUN pip install --quiet \
     'openpyxl==2.1.4' \
     'pyautogui' \
