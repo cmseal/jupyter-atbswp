@@ -10,7 +10,7 @@ USER $NB_UID
 RUN pip install -U pip
 
 RUN conda config --add channels conda-forge && \
-    conda install --quiet \
+    conda install --quiet -y \
     'openpyxl' \
     'pyautogui' \
     'PyPDF2' \
